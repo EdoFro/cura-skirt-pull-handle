@@ -8,6 +8,13 @@ la primera capa para ayudar a retirar impresiones abortadas.
 > Este proyecto modifica trayectorias XYZ y extrusión. Revisa siempre el G-code
 > resultante y realiza las primeras pruebas bajo supervisión.
 
+## Demo
+
+[▶ Watch the skirt pull-handle demo](docs/media/skirt-pull-handle-demo.mp4)
+
+The video shows a printed handle being used to lift and remove the skirt from
+the build plate.
+
 ## Características
 
 - Una asa en la capa superior de cada skirt independiente.
