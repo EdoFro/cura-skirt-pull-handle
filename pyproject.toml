@@ -1,0 +1,19 @@
+[project]
+name = "cura-skirt-pull-handle"
+version = "0.5.0"
+description = "Cura post-processing script that adds removable pull handles to skirts."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Topic :: Multimedia :: Graphics :: 3D Printing"
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]

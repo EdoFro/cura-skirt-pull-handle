@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Procesar G-code de una pieza",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/add_skirt_handle.py",
+      "console": "integratedTerminal",
+      "args": [
+        "${workspaceFolder}/tests/fixtures/box-with-skirt.gcode",
+        "${workspaceFolder}/local-artifacts/debug-output.gcode",
+        "--add-early-handle",
+        "--connect-skirt-to-model"
+      ]
+    },
+    {
+      "name": "Ejecutar pruebas",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "unittest",
+      "console": "integratedTerminal",
+      "args": ["discover", "-s", "tests", "-v"]
+    }
+  ]
+}
