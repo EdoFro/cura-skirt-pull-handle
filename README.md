@@ -10,6 +10,12 @@ la primera capa para ayudar a retirar impresiones abortadas.
 
 ## Demo
 
+
+
+https://github.com/user-attachments/assets/67768322-29d1-4065-85c8-b1c94a7ff359
+
+
+
 [▶ Watch the skirt pull-handle demo](docs/media/skirt-pull-handle-demo.mp4)
 
 The video shows a printed handle being used to lift and remove the skirt from
