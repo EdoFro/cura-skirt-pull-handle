@@ -1,22 +1,23 @@
-# Desarrollo
+# Development
 
-## Diseño
+## Design
 
-`SkirtPullHandle.py` es autocontenido: Cura carga los scripts desde su carpeta
-`scripts` y espera que el archivo y la clase se llamen `SkirtPullHandle`.
-También contiene el núcleo de transformación para probarlo sin ejecutar Cura.
-`add_skirt_handle.py` es solamente el lanzador de terminal.
+`SkirtPullHandle.py` is intentionally self-contained: Cura loads custom scripts
+from its `scripts` directory and expects the file and class to be named
+`SkirtPullHandle`. It also contains the transformation core so it can be tested
+without running Cura. `add_skirt_handle.py` is only the command-line launcher.
 
-## Pruebas
+## Tests
 
 ```powershell
 python -m unittest discover -s tests -v
 ```
 
-Los fixtures cubren una pieza con skirt de una capa y dos piezas secuenciales
-con skirts de dos capas. Guarda resultados manuales en `local-artifacts/`.
+The fixtures cover one model with a single-layer skirt and two sequentially
+printed models with two-layer skirts. Store manual results in
+`local-artifacts/`.
 
-## Prueba por terminal
+## Command-line test
 
 ```powershell
 python .\add_skirt_handle.py `
@@ -26,16 +27,16 @@ python .\add_skirt_handle.py `
   --connect-skirt-to-model
 ```
 
-## Prueba en Cura
+## Testing in Cura
 
-1. Copiar `SkirtPullHandle.py` a la carpeta `scripts` de Cura.
-2. Reiniciar Cura.
-3. Eliminar y volver a agregar el script si cambió su esquema de opciones.
-4. Revisar el G-code antes de imprimir.
+1. Copy `SkirtPullHandle.py` into Cura's `scripts` directory.
+2. Restart Cura.
+3. Remove and add the script again if its settings schema changed.
+4. Inspect the generated G-code before printing.
 
-## Preparar una versión
+## Preparing a release
 
-1. Ejecutar todas las pruebas.
-2. Actualizar `pyproject.toml`, los marcadores G-code y `CHANGELOG.md`.
-3. Verificar manualmente en las versiones de Cura declaradas compatibles.
-4. Distribuir `SkirtPullHandle.py`, `README.md` y `LICENSE`.
+1. Run the full test suite.
+2. Update `pyproject.toml`, the G-code markers, and `CHANGELOG.md`.
+3. Test manually in every Cura version declared compatible.
+4. Distribute `SkirtPullHandle.py`, `README.md`, and `LICENSE`.
