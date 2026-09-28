@@ -1,6 +1,6 @@
 # Absolute-extrusion (`M82`) support investigation
 
-Date: 2026-09-27  
+Date: 2026-09-27
 Scope: design investigation only; this document does **not** enable `M82` input.
 
 ## Conclusion
